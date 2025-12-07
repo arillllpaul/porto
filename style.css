@@ -1,0 +1,311 @@
+/* --- Global Styles --- */
+
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --dark-bg: #1e1e2f;
+    /* Warna dari footer lama */
+    --card-bg: #ffffff;
+    --accent-color: #00d8ff;
+    /* Warna cyan neon */
+    --text-color: #333;
+    --font-main: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    background-color: #f8f9fc;
+    /* Latar belakang abu-abu sangat muda bersih */
+    padding-top: 70px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+
+/* --- Navbar Glassmorphism --- */
+
+.navbar {
+    background: rgba(30, 30, 47, 0.95) !important;
+    /* Semi transparan */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--accent-color) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.nav-link.active {
+    color: var(--accent-color) !important;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+
+/* --- Hero Section Parallax --- */
+
+.hero-section {
+    height: 85vh;
+    /* Lebih tinggi */
+    background: url('home.jpg') center/cover no-repeat fixed;
+    /* Parallax effect */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -70px;
+    /* Kompensasi navbar */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradient modern */
+    background: linear-gradient(135deg, rgba(30, 30, 47, 0.9) 0%, rgba(30, 30, 47, 0.7) 100%);
+}
+
+.custom-btn {
+    background: var(--accent-color);
+    border: none;
+    color: #1e1e2f;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.custom-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 216, 255, 0.4);
+    background: #fff;
+    color: var(--dark-bg);
+}
+
+
+/* --- Profile Image --- */
+
+.img-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.02) rotate(2deg);
+}
+
+
+/* --- Gradient Text --- */
+
+
+/* --- PERBAIKAN WARNA TEKS HERO SECTION --- */
+
+.hero-section h1,
+.hero-section p,
+.hero-section #greeting {
+    color: #ffffff !important;
+    /* Paksa jadi putih */
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    /* Tambah bayangan hitam agar makin jelas */
+}
+
+
+/* Pastikan greeting (Good Morning) juga putih */
+
+
+/* Paksa Greeting jadi Putih */
+
+
+/* --- PAKSA GREETING MENJADI PUTIH --- */
+
+#greeting,
+#greeting * {
+    color: #ffffff !important;
+    /* Paksa warna putih untuk div dan semua isinya */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    /* Bayangan agar terbaca jelas */
+}
+
+
+/* --- Gallery Cards (Modern) --- */
+
+.gallery-item {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 15px !important;
+    background: #fff;
+    overflow: hidden;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 30, 47, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .hover-overlay {
+    opacity: 1;
+}
+
+
+/* --- About Page Specifics --- */
+
+.progress {
+    background-color: #e9ecef;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(90deg, #4e54c8, #8f94fb);
+}
+
+.bg-gradient-info {
+    background: linear-gradient(90deg, #11998e, #38ef7d);
+}
+
+.bg-gradient-warning {
+    background: linear-gradient(90deg, #fce38a, #f38181);
+}
+
+.bg-gradient-danger {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+}
+
+.experience-card {
+    transition: transform 0.2s;
+}
+
+.experience-card:hover {
+    transform: translateX(5px);
+}
+
+
+/* --- Footer --- */
+
+footer {
+    background: #1e1e2f;
+    /* Warna gelap solid */
+    color: #f1f1f1;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--accent-color) !important;
+}
+
+footer .btn-outline-light:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #1e1e2f;
+}
+
+
+/* --- Animations --- */
+
+.fade-in-up {
+    animation: fadeInUp 1s ease-out;
+}
+
+.fade-in-section {
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* --- Responsive --- */
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 60vh;
+    }
+    .profile-image {
+        width: 180px;
+        height: 180px;
+    }
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}

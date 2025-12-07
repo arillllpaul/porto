@@ -1,0 +1,58 @@
+footer {
+    background: linear-gradient(135deg, rgba(30, 30, 47, 0.8), rgba(39, 41, 61, 0.8)), url('home.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #f1f1f1;
+    font-family: 'Arial', sans-serif;
+    padding: 20px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+footer .btn {
+    border-color: #f1f1f1;
+    color: #f1f1f1;
+    transition: all 0.3s ease;
+}
+
+footer .btn:hover {
+    background-color: #f1f1f1;
+    color: #27293d;
+}
+
+footer a {
+    text-decoration: none;
+    color: #f1f1f1;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #00d8ff;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+footer i {
+    color: #00d8ff;
+    margin-right: 8px;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+footer .container div {
+    margin-bottom: 15px;
+}
+
+footer .container p:last-child {
+    margin-top: 20px;
+    font-size: 12px;
+    opacity: 0.7;
+}
